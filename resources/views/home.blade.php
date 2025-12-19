@@ -24,6 +24,10 @@
         <h2>Storage Furniture</h2>
         <p>Smart & spacious</p>
     </a>
+    <a href="/study-tables" class="bento-card highlight">
+        <h2>Study Table</h2>
+        <p>Smart & spacious</p>
+    </a>
 </section>
 
 <section class="categories">
