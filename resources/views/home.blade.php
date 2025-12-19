@@ -30,14 +30,24 @@
     </a>
 </section>
 
-<section class="categories">
-    <h2>Shop by Category</h2>
+<section class="popular-categories">
+    <h2 class="section-title">Popular Categories</h2>
 
-    <div class="category-grid">
-        <div class="category-card">Beds</div>
-        <div class="category-card">Sofas</div>
-        <div class="category-card">Dining</div>
-        <div class="category-card">Storage</div>
+    <div class="popular-wrapper">
+        <div class="popular-track">
+            <a class="category-card" href="/beds">Beds</a>
+            <a class="category-card" href="/sofas">Sofa Sets</a>
+            <a class="category-card" href="/dining">Dining Sets</a>
+            <a class="category-card" href="/tv-unit">Tv Unit</a>
+            <a class="category-card" href="/shoe-rack">Shoe Rack</a>
+            <a class="category-card" href="/console-table">console-table</a>
+            <a class="category-card" href="/coffee-tables">Coffee Tables</a>
+            <a class="category-card" href="/cane-furniture">Cane Furniture</a>
+            <a class="category-card" href="/cane-furniture">Cane Furniture</a>
+            <a class="category-card" href="/cane-furniture">Cane Furniture</a>
+            <a class="category-card" href="/cane-furniture">Cane Furniture</a>
+            <a class="category-card" href="/cane-furniture">Cane Furniture</a>
+        </div>
     </div>
 </section>
 

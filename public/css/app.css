@@ -147,9 +147,9 @@ body {
         grid-row: span 2;
     }
 
-    .hero-bento .highlight {
+    /* .hero-bento .highlight {
         grid-column: span 2;
-    }
+    } */
 }
 
 /* ---------- Card styling ---------- */
@@ -178,4 +178,92 @@ body {
     margin-top: 6px;
     font-size: 14px;
     opacity: 0.8;
+}
+
+@media (hover: hover) {
+    .bento-card {
+        transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .bento-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 30px rgba(0,0,0,.08);
+    }
+}
+
+.popular-categories {
+    padding: 24px 16px;
+}
+
+.section-title {
+    margin-bottom: 14px;
+    font-size: 20px;
+}
+
+/* =======================
+   SLIDER MODE (Mobile → Small Desktop)
+   ======================= */
+
+.popular-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.popular-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.popular-track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 12px;
+    width: max-content;
+    scroll-snap-type: x mandatory;
+}
+
+.category-card {
+    min-width: 180px;
+    aspect-ratio: 4 / 3;   /* ← choose ratio you like */
+    background: #f4f4f4;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    text-decoration: none;
+    color: #222;
+    scroll-snap-align: start;
+}
+
+/* =======================
+   LARGE DESKTOP (NO SLIDER)
+   ======================= */
+@media (min-width: 1200px) {
+    .popular-wrapper {
+        overflow: visible;
+    }
+
+    .popular-track {
+        width: 100%;
+        grid-auto-flow: row;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(2, auto);
+        scroll-snap-type: none;
+    }
+
+    .category-card {
+        min-width: auto;
+        aspect-ratio: 4 / 3;
+    }
+}
+
+@media (hover: hover) {
+    .category-card {
+        transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .category-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 24px rgba(0,0,0,.08);
+    }
 }
