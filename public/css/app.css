@@ -10,8 +10,12 @@ body {
     font-family: system-ui, -apple-system, sans-serif;
     color: #222;
     background: #fff;
+    margin: 0;
 }
-
+/* Universal page wrapper */
+.page-content > section {
+    padding-inline: 16px; /* mobile default */
+}
 .container {
     padding: 1rem;
 }
@@ -48,23 +52,6 @@ body {
     font-size: 1.6rem;
 }
 
-/* CATEGORIES */
-.categories {
-    padding: 1rem;
-}
-
-.category-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-}
-
-.category-card {
-    padding: 1.5rem;
-    background: #f6f6f6;
-    text-align: center;
-    border-radius: 6px;
-}
 
 /* PRODUCTS */
 .products {
@@ -159,7 +146,7 @@ body {
     padding: 20px;
     text-decoration: none;
     color: inherit;
-    min-height: 140px;
+    min-height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -265,5 +252,14 @@ body {
     .category-card:hover {
         transform: translateY(-4px);
         box-shadow: 0 10px 24px rgba(0,0,0,.08);
+    }
+}
+
+/* Large desktop container */
+@media (min-width: 1024px) {
+    .page-content > section {
+        max-width: 1240px;  /* ideal for furniture */
+        margin-inline: auto;
+        padding-inline: 24px;
     }
 }
